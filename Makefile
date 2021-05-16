@@ -2,8 +2,7 @@
 SHELL:=/bin/bash
 
 BRANCH:=$(shell git branch --show-current)
-ROS_IMAGE_VERSION?=python3-gtsam-${BRANCH}
-ROS_IMAGE_TAG?=pvphan/gtsam-image:${ROS_IMAGE_VERSION}
+ROS_IMAGE_TAG?=pvphan/gtsam-image:4.1rc
 
 image:
 	docker build --tag ${ROS_IMAGE_TAG} .
