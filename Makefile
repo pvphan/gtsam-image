@@ -8,6 +8,3 @@ shell: image
 
 image:
 	docker build --tag ${IMAGE_TAG} .
-
-uploadImage: image
-	docker push ${IMAGE_TAG}
