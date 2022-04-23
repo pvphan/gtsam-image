@@ -1,7 +1,7 @@
 
 SHELL:=/bin/bash
 
-GTSAM_IMAGE_DIR:=$(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
+GTSAM_IMAGE_DIR=$(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 IMAGE_TAG?=pvphan/gtsam-image:4.1.1
 
 shell: image
