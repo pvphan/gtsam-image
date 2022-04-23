@@ -1,7 +1,8 @@
 
 SHELL:=/bin/bash
 
-CWD:=$(dir $(abspath $(firstword $(MAKEFILE_LIST))))
+#CWD:=$(dir $(abspath $(firstword $(MAKEFILE_LIST))))
+CWD:=$(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 IMAGE_TAG?=pvphan/gtsam-image:4.1.1
 
 shell: image
