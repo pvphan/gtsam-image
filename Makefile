@@ -2,7 +2,7 @@
 SHELL:=/bin/bash
 
 BRANCH:=$(shell git branch --show-current)
-IMAGE_TAG?=pvphan/gtsam-image:4.1rc
+IMAGE_TAG?=pvphan/gtsam-image:4.1.1
 
 shell: image
 	docker run --rm -it ${IMAGE_TAG} bash
