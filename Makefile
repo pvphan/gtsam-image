@@ -8,7 +8,7 @@ shell: image
 	docker run --rm -it ${IMAGE_TAG} bash
 
 image:
-	${GTSAM_IMAGE_DIR}
+	echo "${GTSAM_IMAGE_DIR}"
 	docker build --tag ${IMAGE_TAG} ${GTSAM_IMAGE_DIR}
 
 uploadImage: image
