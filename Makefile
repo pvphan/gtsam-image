@@ -1,7 +1,6 @@
 
 SHELL:=/bin/bash
 
-BRANCH:=$(shell git branch --show-current)
 IMAGE_TAG?=pvphan/gtsam-image:4.1.1
 
 shell: image
