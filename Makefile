@@ -1,7 +1,6 @@
 
 SHELL:=/bin/bash
 
-BRANCH:=$(shell git branch --show-current)
 IMAGE_TAG?=pvphan/gtsam-image:4.1.1
 
 shell: image
@@ -9,6 +8,3 @@ shell: image
 
 image:
 	docker build --tag ${IMAGE_TAG} .
-
-uploadImage: image
-	docker push ${IMAGE_TAG}
