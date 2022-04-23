@@ -8,6 +8,7 @@ shell: image
 	docker run --rm -it ${IMAGE_TAG} bash
 
 image:
+	echo ${CWD}
 	docker build --tag ${IMAGE_TAG} ${CWD}
 
 uploadImage: image
