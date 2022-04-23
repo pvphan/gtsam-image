@@ -27,7 +27,8 @@ RUN git clone https://github.com/borglab/gtsam.git \
         && git checkout 4.1.1 \
         && mkdir build \
         && cd build \
-        && cmake -D GTSAM_USE_QUATERNIONS=ON \
+        && cmake \
+                -D GTSAM_USE_QUATERNIONS=ON \
                 -D GTSAM_USE_SYSTEM_EIGEN=ON \
                 -D CMAKE_INSTALL_PREFIX=/usr/local \
                 -D CMAKE_BUILD_TYPE=Release \
