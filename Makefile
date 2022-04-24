@@ -1,10 +1,10 @@
 
 SHELL:=/bin/bash
 
-IMAGE_TAG?=pvphan/gtsam-image:4.1.1
+GTSAM_IMAGE_TAG:=pvphan/gtsam-image:4.1.1
 
 shell: image
-	docker run --rm -it ${IMAGE_TAG} bash
+	docker run --rm -it ${GTSAM_IMAGE_TAG} bash
 
 image:
-	docker build --tag ${IMAGE_TAG} .
+	docker build --tag ${GTSAM_IMAGE_TAG} .
